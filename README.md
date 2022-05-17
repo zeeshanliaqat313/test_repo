@@ -1,2 +1,1 @@
-# Hafla Test
-Calculator Basic
+# Calculator Basic (Hafla Test)
