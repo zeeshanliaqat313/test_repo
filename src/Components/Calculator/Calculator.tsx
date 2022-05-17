@@ -14,7 +14,7 @@ import {
 
 export const Calculator = () => {
   
-  const [result, setResult] = useState('');
+  const [result, setResult] = useState('0');
   const [isEqualButtonPressed, setIsEqualButtonPressed] = useState(false);
   const [sum, setSum] = useState(0);
 
@@ -55,7 +55,7 @@ export const Calculator = () => {
 
  const setResultValue =(value: any) => {
 
-    if(sum > 0 && !isLastCharaterPlus()) {
+    if((sum > 0 && !isLastCharaterPlus()) || result === '0') {
       setResult(value);
       setSum(0);
     } else {
@@ -119,6 +119,9 @@ export const Calculator = () => {
             <FormControl w='50%'>
               <Button onClick={() => buttonPlusClicked('+')}>+</Button>
               <Button onClick={() => buttonEqualClicked('=')}>=</Button>
+            </FormControl>
+            <FormControl w='50%'>
+              <Button onClick={() => reset()}>Reset</Button>
             </FormControl>
             
             </div>
