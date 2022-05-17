@@ -15,57 +15,49 @@ import {
 
 export const Calculator = () => {
   
-  const [inputValue, setInputValue] = useState('0');
+  const [inputValue, setInputValue] = useState('');
   const [result, setResult] = useState('');
 
   const buttonOneClicked = (value: any) => {
 
-    // this.state.inputValue + value;
-    // console.log('lodd', value);
-    console.log('lodd', inputValue);
-    setResult(inputValue+value)
-    console.log('lodd', inputValue+value);
-
-    setInputValue(result);
+    setInputValue(inputValue+value);
     
   };
   const buttonZeroClicked = (value: any) => {
-    setResult(inputValue+value)
-
-    setInputValue(result);
+    setInputValue(inputValue+value);
     
   };
   const buttonTwoClicked = (value: any) => {
-    setInputValue(value);
+    setInputValue(inputValue+value);
     
   };
   const buttonThreeClicked = (value: any) => {
-    setInputValue(value);
+    setInputValue(inputValue+value);
     
   };
   const buttonFourClicked = (value: any) => {
-    setInputValue(value);
+    setInputValue(inputValue+value);
     
   };
   const buttonFiveClicked = (value: any) => {
 
-    setInputValue(value);
+    setInputValue(inputValue+value);
   };
   const buttonSixClicked = (value: any) => {
 
-    setInputValue(value);
+    setInputValue(inputValue+value);
   };
   const buttonSevenClicked = (value: any) => {
 
-    setInputValue(value);
+    setInputValue(inputValue+value);
   };
   const buttonEightClicked = (value: any) => {
 
-    setInputValue(value);
+    setInputValue(inputValue+value);
   };
   const buttonNineClicked = (value: any) => {
 
-    setInputValue(value);
+    setInputValue(inputValue+value);
   };
   
 
