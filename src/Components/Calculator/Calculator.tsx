@@ -60,9 +60,11 @@ export const Calculator = () => {
   };
 
   const buttonPlusClicked = (value: any) => {
+    setResult(result+value);
 
   }
   const buttonEqualClicked = (value: any) => {
+    setResult(result+value);
 
   }
   
@@ -111,8 +113,8 @@ export const Calculator = () => {
               <Button onClick={() => buttonZeroClicked(0)}>0</Button>
             </FormControl>
             <FormControl w='50%'>
-              <Button onClick={() => buttonPlusClicked(1)}>+</Button>
-              <Button onClick={() => buttonEqualClicked(1)}>=</Button>
+              <Button onClick={() => buttonPlusClicked('+')}>+</Button>
+              <Button onClick={() => buttonEqualClicked('=')}>=</Button>
             </FormControl>
             
             </div>
