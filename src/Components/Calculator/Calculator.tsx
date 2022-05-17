@@ -57,6 +57,7 @@ export const Calculator = () => {
 
     if(sum > 0 && !isLastCharaterPlus()) {
       setResult(value);
+      setSum(0);
     } else {
       setResult(result+value);
     }
