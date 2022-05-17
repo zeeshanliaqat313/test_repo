@@ -20,7 +20,6 @@ export const Calculator = () => {
 
 
   const buttonPlusClicked = (value: any) => {
-    console.log('resss', result);
 
     if (result.length === 0) {
       return;
