@@ -59,6 +59,13 @@ export const Calculator = () => {
 
     setInputValue(inputValue+value);
   };
+
+  const buttonPlusClicked = (value: any) => {
+
+  }
+  const buttonEqualClicked = (value: any) => {
+
+  }
   
 
  
@@ -104,6 +111,11 @@ export const Calculator = () => {
             <FormControl w='50%'>
               <Button onClick={() => buttonZeroClicked(1)}>0</Button>
             </FormControl>
+            <FormControl w='50%'>
+              <Button onClick={() => buttonPlusClicked(1)}>+</Button>
+              <Button onClick={() => buttonEqualClicked(1)}>=</Button>
+            </FormControl>
+            
             </div>
         </Box>
         </ChakraProvider >
