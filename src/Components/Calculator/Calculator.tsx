@@ -2,58 +2,32 @@ import React, { useState, useEffect } from "react";
 import {
   ChakraProvider,
   Box,
-  Text,
-  Link,
-  VStack,
-  Code,
   Input,
-  Grid,
   theme,
-  FormErrorMessage,
-  FormHelperText,
   Heading,
   Button,
-  ButtonGroup,
-  Stack,
-  HStack,
-  Select,
+
   FormControl,
   FormLabel,
-  Accordion,
-  AccordionItem,
-  AccordionButton,
-  AccordionPanel,
-  AccordionIcon,
-  Table,
-  Thead,
-  Tbody,
-  Tfoot,
-  Tr,
-  Th,
-  Td,
-  TableCaption,
-  TableContainer,
-  Textarea,
+  
 } from "@chakra-ui/react";
 
 
 export const Calculator = () => {
-  const [buttonZero, setButtonZero] = useState(undefined);
-  const [buttonOne, setButtonOne] = useState(undefined);
-  const [buttonTwo, setButtonTwo] = useState(undefined);
-  const [buttonThree, setButtonThree] = useState(undefined);
-  const [buttonFour, setButtonFour] = useState(undefined);
-  const [buttonFive, setButtonFive] = useState(undefined);
-  const [buttonSix, setButtonSix] = useState(undefined);
-  const [buttonSeven, setButtonSeven] = useState(undefined);
-  const [buttonEight, setButtonEight] = useState(undefined);
+  
+  const [inputValue, setInputValue] = useState('0');
 
   // const [selectedExperienceCategory, setSelectedExperienceCategory] = useState({
   //   id: '',
   //   name: '',
   // });
 
+  const buttonOneClicked = (value: any) => {
 
+    setInputValue(value);
+    
+  };
+ 
 
 
   return (
@@ -63,6 +37,15 @@ export const Calculator = () => {
           <Heading className='applicationTitle' as="h1" size="xl">
             Basic Calculator
           </Heading>
+            <div>
+
+          <FormControl w='50%'>
+            <FormLabel htmlFor='name'>First Name</FormLabel>
+                <Input id='inputValue' type='inputValue' value={inputValue}/>
+            <Button onClick={() => buttonOneClicked(1)}>1</Button>
+
+            </FormControl>
+            </div>
         </Box>
         </ChakraProvider >
     </div>
