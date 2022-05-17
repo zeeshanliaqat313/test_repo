@@ -21,6 +21,10 @@ export const Calculator = () => {
 
   const buttonPlusClicked = (value: any) => {
     console.log('resss', result);
+
+    if (result.length === 0) {
+      return;
+    }
     if (result.length > 0) {
       const lastChar = result.charAt(result.length - 1);
       if (lastChar === '+') {
