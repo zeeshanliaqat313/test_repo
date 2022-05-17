@@ -23,8 +23,7 @@ export const Calculator = () => {
     console.log('resss', result);
     if (result.length > 0) {
       const lastChar = result.charAt(result.length - 1);
-      if (lastChar !== '+') {
-        setResult(result+value);
+      if (lastChar === '+') {
         return;
       }
     }
