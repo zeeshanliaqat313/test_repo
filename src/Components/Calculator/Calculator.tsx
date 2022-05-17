@@ -15,7 +15,7 @@ import {
 
 export const Calculator = () => {
   
-  const [result, setResult] = useState('0');
+  const [result, setResult] = useState('');
 
   const buttonOneClicked = (value: any) => {
 
