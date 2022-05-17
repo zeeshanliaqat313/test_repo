@@ -16,19 +16,23 @@ import {
 export const Calculator = () => {
   
   const [inputValue, setInputValue] = useState('0');
-
-  // const [selectedExperienceCategory, setSelectedExperienceCategory] = useState({
-  //   id: '',
-  //   name: '',
-  // });
+  const [result, setResult] = useState('');
 
   const buttonOneClicked = (value: any) => {
 
-    setInputValue(value);
+    // this.state.inputValue + value;
+    // console.log('lodd', value);
+    console.log('lodd', inputValue);
+    setResult(inputValue+value)
+    console.log('lodd', inputValue+value);
+
+    setInputValue(result);
     
   };
   const buttonZeroClicked = (value: any) => {
-    setInputValue(value);
+    setResult(inputValue+value)
+
+    setInputValue(result);
     
   };
   const buttonTwoClicked = (value: any) => {
@@ -63,6 +67,7 @@ export const Calculator = () => {
 
     setInputValue(value);
   };
+  
 
  
 
