@@ -74,27 +74,38 @@ export const Calculator = () => {
           <Heading className='applicationTitle' as="h1" size="xl">
             Basic Calculator
           </Heading>
-            <div>
+            <div className='row'>
 
-          <FormControl w='50%'>
-            <FormLabel htmlFor='inputValue'></FormLabel>
-                <Input id='inputValue' type='inputValue' value={inputValue}/>
-            
+            <FormControl w='50%'>
+              <FormLabel htmlFor='inputValue'></FormLabel>
+                  <Input id='inputValue' type='inputValue' value={inputValue}/>
+              
+
+            </FormControl>
+            </div>
+            <div className='row'>
+
+            <FormControl w='50%'>
+
+              <Button onClick={() => buttonSevenClicked(7)}>7</Button>
+              <Button onClick={() => buttonEightClicked(8)}>8</Button>
+              <Button onClick={() => buttonNineClicked(9)}>9</Button>
 
             </FormControl>
             <FormControl w='50%'>
-            <FormLabel htmlFor='inputValue'></FormLabel>
-            <Button onClick={() => buttonZeroClicked(1)}>0</Button>
-            <Button onClick={() => buttonOneClicked(1)}>1</Button>
-            <Button onClick={() => buttonTwoClicked(2)}>2</Button>
-            <Button onClick={() => buttonThreeClicked(3)}>3</Button>
-            <Button onClick={() => buttonFourClicked(4)}>4</Button>
-            <Button onClick={() => buttonFiveClicked(5)}>5</Button>
-            <Button onClick={() => buttonSixClicked(6)}>6</Button>
-            <Button onClick={() => buttonSevenClicked(7)}>7</Button>
-            <Button onClick={() => buttonEightClicked(8)}>8</Button>
-            <Button onClick={() => buttonNineClicked(9)}>9</Button>
+              <Button onClick={() => buttonFourClicked(4)}>4</Button>
+              <Button onClick={() => buttonFiveClicked(5)}>5</Button>
+              <Button onClick={() => buttonSixClicked(6)}>6</Button>
 
+            </FormControl>
+            <FormControl w='50%'>
+              <Button onClick={() => buttonOneClicked(1)}>1</Button>
+              <Button onClick={() => buttonTwoClicked(2)}>2</Button>
+              <Button onClick={() => buttonThreeClicked(3)}>3</Button>
+
+            </FormControl>
+            <FormControl w='50%'>
+              <Button onClick={() => buttonZeroClicked(1)}>0</Button>
             </FormControl>
             </div>
         </Box>
