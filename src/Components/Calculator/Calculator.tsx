@@ -6,7 +6,6 @@ import {
   theme,
   Heading,
   Button,
-
   FormControl,
   FormLabel,
   
@@ -16,56 +15,35 @@ import {
 export const Calculator = () => {
   
   const [result, setResult] = useState('');
+  const [isEqualButtonPressed, setIsEqualButtonPressed] = useState(false);
+  const [sum, setSum] = useState(0);
 
-  const buttonOneClicked = (value: any) => {
-
-    setResult(result+value);
-    
-  };
-  const buttonZeroClicked = (value: any) => {
-    setResult(result+value);
-    
-  };
-  const buttonTwoClicked = (value: any) => {
-    setResult(result+value);
-    
-  };
-  const buttonThreeClicked = (value: any) => {
-    setResult(result+value);
-    
-  };
-  const buttonFourClicked = (value: any) => {
-    setResult(result+value);
-    
-  };
-  const buttonFiveClicked = (value: any) => {
-
-    setResult(result+value);
-  };
-  const buttonSixClicked = (value: any) => {
-
-    setResult(result+value);
-  };
-  const buttonSevenClicked = (value: any) => {
-
-    setResult(result+value);
-  };
-  const buttonEightClicked = (value: any) => {
-
-    setResult(result+value);
-  };
-  const buttonNineClicked = (value: any) => {
-
-    setResult(result+value);
-  };
 
   const buttonPlusClicked = (value: any) => {
+    console.log('resss', result);
+    if (result.length > 0) {
+      const lastChar = result.charAt(result.length - 1);
+      if (lastChar !== '+') {
+        setResult(result+value);
+        return;
+      }
+    }
+
     setResult(result+value);
+
 
   }
   const buttonEqualClicked = (value: any) => {
-
-    reset();
+    const finalResult = result;
+    const valuesArr = result.split('+');
+    let sum: number = 0;
+    valuesArr.forEach(element => {
+      sum = Number(sum) + Number(element);
+    });
+    console.log('sum', sum);
+    setSum(sum);
+    setResult(String(sum));
+    setIsEqualButtonPressed(true);
   }
 
   const reset = () => {
@@ -74,7 +52,26 @@ export const Calculator = () => {
   }
   
 
- 
+ const setResultValue =(value: any) => {
+
+    if(sum > 0 && !isLastCharaterPlus()) {
+      setResult(value);
+    } else {
+      setResult(result+value);
+    }
+ }
+
+ const isLastCharaterPlus = () => {
+  if (result.length > 0) {
+    const lastChar = result.charAt(result.length - 1);
+    if (lastChar === '+') {
+      return true;
+    }
+
+  return false;
+  
+  }
+}
 
 
   return (
@@ -97,25 +94,25 @@ export const Calculator = () => {
 
             <FormControl w='50%'>
 
-              <Button onClick={() => buttonSevenClicked(7)}>7</Button>
-              <Button onClick={() => buttonEightClicked(8)}>8</Button>
-              <Button onClick={() => buttonNineClicked(9)}>9</Button>
+              <Button onClick={() => setResultValue(7)}>7</Button>
+              <Button onClick={() => setResultValue(8)}>8</Button>
+              <Button onClick={() => setResultValue(9)}>9</Button>
 
             </FormControl>
             <FormControl w='50%'>
-              <Button onClick={() => buttonFourClicked(4)}>4</Button>
-              <Button onClick={() => buttonFiveClicked(5)}>5</Button>
-              <Button onClick={() => buttonSixClicked(6)}>6</Button>
+              <Button onClick={() => setResultValue(4)}>4</Button>
+              <Button onClick={() => setResultValue(5)}>5</Button>
+              <Button onClick={() => setResultValue(6)}>6</Button>
 
             </FormControl>
             <FormControl w='50%'>
-              <Button onClick={() => buttonOneClicked(1)}>1</Button>
-              <Button onClick={() => buttonTwoClicked(2)}>2</Button>
-              <Button onClick={() => buttonThreeClicked(3)}>3</Button>
+              <Button onClick={() => setResultValue(1)}>1</Button>
+              <Button onClick={() => setResultValue(2)}>2</Button>
+              <Button onClick={() => setResultValue(3)}>3</Button>
 
             </FormControl>
             <FormControl w='50%'>
-              <Button onClick={() => buttonZeroClicked(0)}>0</Button>
+              <Button onClick={() => setResultValue(0)}>0</Button>
             </FormControl>
             <FormControl w='50%'>
               <Button onClick={() => buttonPlusClicked('+')}>+</Button>
