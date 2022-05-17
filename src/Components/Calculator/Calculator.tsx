@@ -15,49 +15,48 @@ import {
 
 export const Calculator = () => {
   
-  const [inputValue, setInputValue] = useState('');
   const [result, setResult] = useState('');
 
   const buttonOneClicked = (value: any) => {
 
-    setInputValue(inputValue+value);
+    setResult(result+value);
     
   };
   const buttonZeroClicked = (value: any) => {
-    setInputValue(inputValue+value);
+    setResult(result+value);
     
   };
   const buttonTwoClicked = (value: any) => {
-    setInputValue(inputValue+value);
+    setResult(result+value);
     
   };
   const buttonThreeClicked = (value: any) => {
-    setInputValue(inputValue+value);
+    setResult(result+value);
     
   };
   const buttonFourClicked = (value: any) => {
-    setInputValue(inputValue+value);
+    setResult(result+value);
     
   };
   const buttonFiveClicked = (value: any) => {
 
-    setInputValue(inputValue+value);
+    setResult(result+value);
   };
   const buttonSixClicked = (value: any) => {
 
-    setInputValue(inputValue+value);
+    setResult(result+value);
   };
   const buttonSevenClicked = (value: any) => {
 
-    setInputValue(inputValue+value);
+    setResult(result+value);
   };
   const buttonEightClicked = (value: any) => {
 
-    setInputValue(inputValue+value);
+    setResult(result+value);
   };
   const buttonNineClicked = (value: any) => {
 
-    setInputValue(inputValue+value);
+    setResult(result+value);
   };
 
   const buttonPlusClicked = (value: any) => {
@@ -81,8 +80,8 @@ export const Calculator = () => {
             <div className='row'>
 
             <FormControl w='50%'>
-              <FormLabel htmlFor='inputValue'></FormLabel>
-                  <Input id='inputValue' type='inputValue' value={inputValue}/>
+              <FormLabel htmlFor='result'></FormLabel>
+                  <Input id='result' type='result' value={result}/>
               
 
             </FormControl>
@@ -109,7 +108,7 @@ export const Calculator = () => {
 
             </FormControl>
             <FormControl w='50%'>
-              <Button onClick={() => buttonZeroClicked(1)}>0</Button>
+              <Button onClick={() => buttonZeroClicked(0)}>0</Button>
             </FormControl>
             <FormControl w='50%'>
               <Button onClick={() => buttonPlusClicked(1)}>+</Button>
