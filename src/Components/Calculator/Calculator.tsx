@@ -59,7 +59,7 @@ export const Calculator = () => {
       setResult(value);
       setSum(0);
     } else {
-      setResult(result+value);
+      setResult(String(result)+String(value));
     }
  }
 
