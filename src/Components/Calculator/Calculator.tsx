@@ -34,13 +34,11 @@ export const Calculator = () => {
 
   }
   const buttonEqualClicked = (value: any) => {
-    const finalResult = result;
     const valuesArr = result.split('+');
     let sum: number = 0;
     valuesArr.forEach(element => {
       sum = Number(sum) + Number(element);
     });
-    console.log('sum', sum);
     setSum(sum);
     setResult(String(sum));
     setIsEqualButtonPressed(true);
