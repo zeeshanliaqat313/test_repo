@@ -15,7 +15,7 @@ import {
 
 export const Calculator = () => {
   
-  const [result, setResult] = useState('');
+  const [result, setResult] = useState('0');
 
   const buttonOneClicked = (value: any) => {
 
@@ -64,7 +64,12 @@ export const Calculator = () => {
 
   }
   const buttonEqualClicked = (value: any) => {
-    setResult(result+value);
+
+    reset();
+  }
+
+  const reset = () => {
+    setResult('0');
 
   }
   
