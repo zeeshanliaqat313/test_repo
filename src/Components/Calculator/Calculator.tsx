@@ -28,40 +28,40 @@ export const Calculator = () => {
     
   };
   const buttonZeroClicked = (value: any) => {
-
+    setInputValue(value);
     
   };
   const buttonTwoClicked = (value: any) => {
-
+    setInputValue(value);
     
   };
   const buttonThreeClicked = (value: any) => {
-
+    setInputValue(value);
     
   };
   const buttonFourClicked = (value: any) => {
-
+    setInputValue(value);
     
   };
   const buttonFiveClicked = (value: any) => {
 
-    
+    setInputValue(value);
   };
   const buttonSixClicked = (value: any) => {
 
-    
+    setInputValue(value);
   };
   const buttonSevenClicked = (value: any) => {
 
-    
+    setInputValue(value);
   };
   const buttonEightClicked = (value: any) => {
 
-    
+    setInputValue(value);
   };
   const buttonNineClicked = (value: any) => {
 
-    
+    setInputValue(value);
   };
 
  
